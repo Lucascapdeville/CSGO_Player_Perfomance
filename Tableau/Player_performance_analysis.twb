@@ -1,0 +1,1403 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0812.0353                               -->
+<workbook original-version='18.1' source-build='2022.2.1 (20222.22.0812.0353)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='players_stats' inline='true' name='federated.0ux2u801vyb8kc1baarkv0ugm5nr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='players_stats' name='textscan.1q8n8mg05frl9e17xeqns127ucdd'>
+            <connection class='textscan' directory='C:/Users/Botelho/OneDrive/Documentos/Ironhack/Projetos/CSGO_Player_Perfomance/data' filename='players_stats.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1q8n8mg05frl9e17xeqns127ucdd' name='players_stats.csv' table='[players_stats#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=';'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='string' name='player' ordinal='2' />
+            <column datatype='string' name='player_team' ordinal='3' />
+            <column datatype='integer' name='s1' ordinal='4' />
+            <column datatype='string' name='opponent' ordinal='5' />
+            <column datatype='integer' name='s2' ordinal='6' />
+            <column datatype='string' name='rating2.0' ordinal='7' />
+            <column datatype='string' name='map' ordinal='8' />
+            <column datatype='date' name='date' ordinal='9' />
+            <column datatype='string' name='event_type' ordinal='10' />
+            <column datatype='string' name='event_tier' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1q8n8mg05frl9e17xeqns127ucdd' name='players_stats.csv' table='[players_stats#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=';'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='string' name='player' ordinal='2' />
+            <column datatype='string' name='player_team' ordinal='3' />
+            <column datatype='integer' name='s1' ordinal='4' />
+            <column datatype='string' name='opponent' ordinal='5' />
+            <column datatype='integer' name='s2' ordinal='6' />
+            <column datatype='string' name='rating2.0' ordinal='7' />
+            <column datatype='string' name='map' ordinal='8' />
+            <column datatype='date' name='date' ordinal='9' />
+            <column datatype='string' name='event_type' ordinal='10' />
+            <column datatype='string' name='event_tier' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>player</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_team]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>player_team</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>s1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[s1]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>s1</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>opponent</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[opponent]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>opponent</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>s2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[s2]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>s2</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating2.0</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rating2.0]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>rating2.0</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>map</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[map]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>map</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>event_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[event_type]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>event_type</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>event_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[event_tier]</local-name>
+            <parent-name>[players_stats.csv]</parent-name>
+            <remote-alias>event_tier</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Rating' datatype='real' name='[Calculation_1034139076755251200]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT([rating2.0])' />
+      </column>
+      <column datatype='integer' hidden='true' name='[F1]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Rating (group)]' role='dimension' type='ordinal'>
+        <calculation class='categorical-bin' column='[Calculation_1034139076755251200]' new-bin='true'>
+          <bin default-name='true' value='&quot;0,14, 0,15, 0,17 and 3 more&quot;'>
+            <value>0.14000000000000001</value>
+            <value>0.14999999999999999</value>
+            <value>0.17000000000000001</value>
+            <value>0.17999999999999999</value>
+            <value>0.19</value>
+            <value>0.20000000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,21, 0,22, 0,23 and 2 more&quot;'>
+            <value>0.20999999999999999</value>
+            <value>0.22</value>
+            <value>0.23000000000000001</value>
+            <value>0.23999999999999999</value>
+            <value>0.25</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,26, 0,27, 0,28 and 2 more&quot;'>
+            <value>0.26000000000000001</value>
+            <value>0.27000000000000002</value>
+            <value>0.28000000000000003</value>
+            <value>0.28999999999999998</value>
+            <value>0.29999999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,31, 0,32, 0,33 and 2 more&quot;'>
+            <value>0.31</value>
+            <value>0.32000000000000001</value>
+            <value>0.33000000000000002</value>
+            <value>0.34000000000000002</value>
+            <value>0.34999999999999998</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,36, 0,37, 0,38 and 2 more&quot;'>
+            <value>0.35999999999999999</value>
+            <value>0.37</value>
+            <value>0.38</value>
+            <value>0.39000000000000001</value>
+            <value>0.40000000000000002</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,41, 0,42, 0,43 and 2 more&quot;'>
+            <value>0.40999999999999998</value>
+            <value>0.41999999999999998</value>
+            <value>0.42999999999999999</value>
+            <value>0.44</value>
+            <value>0.45000000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,46, 0,47, 0,48 and 2 more&quot;'>
+            <value>0.46000000000000002</value>
+            <value>0.46999999999999997</value>
+            <value>0.47999999999999998</value>
+            <value>0.48999999999999999</value>
+            <value>0.5</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,51, 0,52, 0,53 and 2 more&quot;'>
+            <value>0.51000000000000001</value>
+            <value>0.52000000000000002</value>
+            <value>0.53000000000000003</value>
+            <value>0.54000000000000004</value>
+            <value>0.55000000000000004</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,56, 0,57, 0,58 and 2 more&quot;'>
+            <value>0.56000000000000005</value>
+            <value>0.56999999999999995</value>
+            <value>0.57999999999999996</value>
+            <value>0.58999999999999997</value>
+            <value>0.59999999999999998</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,61, 0,62, 0,63 and 2 more&quot;'>
+            <value>0.60999999999999999</value>
+            <value>0.62</value>
+            <value>0.63</value>
+            <value>0.64000000000000001</value>
+            <value>0.65000000000000002</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,66, 0,67, 0,68 and 2 more&quot;'>
+            <value>0.66000000000000003</value>
+            <value>0.67000000000000004</value>
+            <value>0.68000000000000005</value>
+            <value>0.68999999999999995</value>
+            <value>0.69999999999999996</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,71, 0,72, 0,73 and 2 more&quot;'>
+            <value>0.70999999999999996</value>
+            <value>0.71999999999999997</value>
+            <value>0.72999999999999998</value>
+            <value>0.73999999999999999</value>
+            <value>0.75</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,76, 0,77, 0,78 and 2 more&quot;'>
+            <value>0.76000000000000001</value>
+            <value>0.77000000000000002</value>
+            <value>0.78000000000000003</value>
+            <value>0.79000000000000004</value>
+            <value>0.80000000000000004</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,81, 0,82, 0,83 and 2 more&quot;'>
+            <value>0.81000000000000005</value>
+            <value>0.81999999999999995</value>
+            <value>0.82999999999999996</value>
+            <value>0.83999999999999997</value>
+            <value>0.84999999999999998</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,86, 0,87, 0,88 and 2 more&quot;'>
+            <value>0.85999999999999999</value>
+            <value>0.87</value>
+            <value>0.88</value>
+            <value>0.89000000000000001</value>
+            <value>0.90000000000000002</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,91, 0,92, 0,93 and 2 more&quot;'>
+            <value>0.91000000000000003</value>
+            <value>0.92000000000000004</value>
+            <value>0.93000000000000005</value>
+            <value>0.93999999999999995</value>
+            <value>0.94999999999999996</value>
+          </bin>
+          <bin default-name='true' value='&quot;0,96, 0,97, 0,98 and 2 more&quot;'>
+            <value>0.95999999999999996</value>
+            <value>0.96999999999999997</value>
+            <value>0.97999999999999998</value>
+            <value>0.98999999999999999</value>
+            <value>1.0</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,01, 1,02, 1,03 and 2 more&quot;'>
+            <value>1.01</value>
+            <value>1.02</value>
+            <value>1.03</value>
+            <value>1.04</value>
+            <value>1.05</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,06, 1,07, 1,08 and 2 more&quot;'>
+            <value>1.0600000000000001</value>
+            <value>1.0700000000000001</value>
+            <value>1.0800000000000001</value>
+            <value>1.0900000000000001</value>
+            <value>1.1000000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,11, 1,12, 1,13 and 2 more&quot;'>
+            <value>1.1100000000000001</value>
+            <value>1.1200000000000001</value>
+            <value>1.1299999999999999</value>
+            <value>1.1399999999999999</value>
+            <value>1.1499999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,16, 1,17, 1,18 and 2 more&quot;'>
+            <value>1.1599999999999999</value>
+            <value>1.1699999999999999</value>
+            <value>1.1799999999999999</value>
+            <value>1.1899999999999999</value>
+            <value>1.2</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,21, 1,22, 1,23 and 2 more&quot;'>
+            <value>1.21</value>
+            <value>1.22</value>
+            <value>1.23</value>
+            <value>1.24</value>
+            <value>1.25</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,26, 1,27, 1,28 and 2 more&quot;'>
+            <value>1.26</value>
+            <value>1.27</value>
+            <value>1.28</value>
+            <value>1.29</value>
+            <value>1.3</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,31, 1,32, 1,33 and 2 more&quot;'>
+            <value>1.3100000000000001</value>
+            <value>1.3200000000000001</value>
+            <value>1.3300000000000001</value>
+            <value>1.3400000000000001</value>
+            <value>1.3500000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,36, 1,37, 1,38 and 2 more&quot;'>
+            <value>1.3600000000000001</value>
+            <value>1.3700000000000001</value>
+            <value>1.3799999999999999</value>
+            <value>1.3899999999999999</value>
+            <value>1.3999999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,41, 1,42, 1,43 and 2 more&quot;'>
+            <value>1.4099999999999999</value>
+            <value>1.4199999999999999</value>
+            <value>1.4299999999999999</value>
+            <value>1.4399999999999999</value>
+            <value>1.45</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,46, 1,47, 1,48 and 2 more&quot;'>
+            <value>1.46</value>
+            <value>1.47</value>
+            <value>1.48</value>
+            <value>1.49</value>
+            <value>1.5</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,51, 1,52, 1,53 and 2 more&quot;'>
+            <value>1.51</value>
+            <value>1.52</value>
+            <value>1.53</value>
+            <value>1.54</value>
+            <value>1.55</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,56, 1,57, 1,58 and 2 more&quot;'>
+            <value>1.5600000000000001</value>
+            <value>1.5700000000000001</value>
+            <value>1.5800000000000001</value>
+            <value>1.5900000000000001</value>
+            <value>1.6000000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,61, 1,62, 1,63 and 2 more&quot;'>
+            <value>1.6100000000000001</value>
+            <value>1.6200000000000001</value>
+            <value>1.6299999999999999</value>
+            <value>1.6399999999999999</value>
+            <value>1.6499999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,66, 1,67, 1,68 and 2 more&quot;'>
+            <value>1.6599999999999999</value>
+            <value>1.6699999999999999</value>
+            <value>1.6799999999999999</value>
+            <value>1.6899999999999999</value>
+            <value>1.7</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,71, 1,72, 1,73 and 2 more&quot;'>
+            <value>1.71</value>
+            <value>1.72</value>
+            <value>1.73</value>
+            <value>1.74</value>
+            <value>1.75</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,76, 1,77, 1,78 and 2 more&quot;'>
+            <value>1.76</value>
+            <value>1.77</value>
+            <value>1.78</value>
+            <value>1.79</value>
+            <value>1.8</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,81, 1,82, 1,83 and 2 more&quot;'>
+            <value>1.8100000000000001</value>
+            <value>1.8200000000000001</value>
+            <value>1.8300000000000001</value>
+            <value>1.8400000000000001</value>
+            <value>1.8500000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,86, 1,87, 1,88 and 2 more&quot;'>
+            <value>1.8600000000000001</value>
+            <value>1.8700000000000001</value>
+            <value>1.8799999999999999</value>
+            <value>1.8899999999999999</value>
+            <value>1.8999999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,91, 1,92, 1,93 and 2 more&quot;'>
+            <value>1.9099999999999999</value>
+            <value>1.9199999999999999</value>
+            <value>1.9299999999999999</value>
+            <value>1.9399999999999999</value>
+            <value>1.95</value>
+          </bin>
+          <bin default-name='true' value='&quot;1,96, 1,97, 1,98 and 2 more&quot;'>
+            <value>1.96</value>
+            <value>1.97</value>
+            <value>1.98</value>
+            <value>1.99</value>
+            <value>2.0</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,01, 2,02, 2,03 and 2 more&quot;'>
+            <value>2.0099999999999998</value>
+            <value>2.02</value>
+            <value>2.0299999999999998</value>
+            <value>2.04</value>
+            <value>2.0499999999999998</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,06, 2,07, 2,08 and 2 more&quot;'>
+            <value>2.0600000000000001</value>
+            <value>2.0699999999999998</value>
+            <value>2.0800000000000001</value>
+            <value>2.0899999999999999</value>
+            <value>2.1000000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,11, 2,12, 2,13 and 2 more&quot;'>
+            <value>2.1099999999999999</value>
+            <value>2.1200000000000001</value>
+            <value>2.1299999999999999</value>
+            <value>2.1400000000000001</value>
+            <value>2.1499999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,16, 2,17, 2,18 and 2 more&quot;'>
+            <value>2.1600000000000001</value>
+            <value>2.1699999999999999</value>
+            <value>2.1800000000000002</value>
+            <value>2.1899999999999999</value>
+            <value>2.2000000000000002</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,21, 2,22, 2,23 and 2 more&quot;'>
+            <value>2.21</value>
+            <value>2.2200000000000002</value>
+            <value>2.23</value>
+            <value>2.2400000000000002</value>
+            <value>2.25</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,26, 2,27, 2,28 and 2 more&quot;'>
+            <value>2.2599999999999998</value>
+            <value>2.27</value>
+            <value>2.2799999999999998</value>
+            <value>2.29</value>
+            <value>2.2999999999999998</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,31, 2,32, 2,33 and 2 more&quot;'>
+            <value>2.3100000000000001</value>
+            <value>2.3199999999999998</value>
+            <value>2.3300000000000001</value>
+            <value>2.3399999999999999</value>
+            <value>2.3500000000000001</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,36, 2,37, 2,38 and 2 more&quot;'>
+            <value>2.3599999999999999</value>
+            <value>2.3700000000000001</value>
+            <value>2.3799999999999999</value>
+            <value>2.3900000000000001</value>
+            <value>2.3999999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,42, 2,43, 2,44 and 1 more&quot;'>
+            <value>2.4199999999999999</value>
+            <value>2.4300000000000002</value>
+            <value>2.4399999999999999</value>
+            <value>2.4500000000000002</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,46, 2,48, 2,49 and 1 more&quot;'>
+            <value>2.46</value>
+            <value>2.48</value>
+            <value>2.4900000000000002</value>
+            <value>2.5</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,51, 2,53, 2,54 and 1 more&quot;'>
+            <value>2.5099999999999998</value>
+            <value>2.5299999999999998</value>
+            <value>2.54</value>
+            <value>2.5499999999999998</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,56, 2,57, 2,59&quot;'>
+            <value>2.5600000000000001</value>
+            <value>2.5699999999999998</value>
+            <value>2.5899999999999999</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,66, 2,67, 2,68&quot;'>
+            <value>2.6600000000000001</value>
+            <value>2.6699999999999999</value>
+            <value>2.6800000000000002</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,71 &amp; 2,72&quot;'>
+            <value>2.71</value>
+            <value>2.7200000000000002</value>
+          </bin>
+          <bin default-name='true' value='&quot;2,81, 2,82, 2,83&quot;'>
+            <value>2.8100000000000001</value>
+            <value>2.8199999999999998</value>
+            <value>2.8300000000000001</value>
+          </bin>
+        </calculation>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='players_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Event Tier' datatype='string' name='[event_tier]' role='dimension' type='nominal' />
+      <column caption='Event Type' datatype='string' name='[event_type]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Map' datatype='string' name='[map]' role='dimension' type='nominal' />
+      <column caption='Opponent' datatype='string' name='[opponent]' role='dimension' type='nominal' />
+      <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+      <column caption='Player Team' datatype='string' name='[player_team]' role='dimension' type='nominal' />
+      <column caption='Rating2.0' datatype='string' hidden='true' name='[rating2.0]' role='dimension' type='nominal' />
+      <column caption='S1' datatype='integer' name='[s1]' role='measure' type='quantitative' />
+      <column caption='S2' datatype='integer' name='[s2]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brazil&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='id' />
+        <field-sort-custom-order field='player' />
+        <field-sort-custom-order field='player_team' />
+        <field-sort-custom-order field='s1' />
+        <field-sort-custom-order field='opponent' />
+        <field-sort-custom-order field='s2' />
+        <field-sort-custom-order field='rating2.0' />
+        <field-sort-custom-order field='Calculation_1034139076755251200' />
+        <field-sort-custom-order field='map' />
+        <field-sort-custom-order field='date' />
+        <field-sort-custom-order field='event_type' />
+        <field-sort-custom-order field='event_tier' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='players_stats.csv' id='players_stats.csv_AE62473119AF450A8FD56089E88ACAB4'>
+            <properties context=''>
+              <relation connection='textscan.1q8n8mg05frl9e17xeqns127ucdd' name='players_stats.csv' table='[players_stats#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=';'>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='id' ordinal='1' />
+                  <column datatype='string' name='player' ordinal='2' />
+                  <column datatype='string' name='player_team' ordinal='3' />
+                  <column datatype='integer' name='s1' ordinal='4' />
+                  <column datatype='string' name='opponent' ordinal='5' />
+                  <column datatype='integer' name='s2' ordinal='6' />
+                  <column datatype='string' name='rating2.0' ordinal='7' />
+                  <column datatype='string' name='map' ordinal='8' />
+                  <column datatype='date' name='date' ordinal='9' />
+                  <column datatype='string' name='event_type' ordinal='10' />
+                  <column datatype='string' name='event_tier' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='players_stats' name='federated.0ux2u801vyb8kc1baarkv0ugm5nr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ux2u801vyb8kc1baarkv0ugm5nr'>
+            <column caption='Rating' datatype='real' name='[Calculation_1034139076755251200]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT([rating2.0])' />
+            </column>
+            <column datatype='string' name='[Rating (group)]' role='dimension' type='ordinal'>
+              <calculation class='categorical-bin' column='[Calculation_1034139076755251200]' new-bin='true'>
+                <bin default-name='true' value='&quot;0,14, 0,15, 0,17 and 3 more&quot;'>
+                  <value>0.14000000000000001</value>
+                  <value>0.14999999999999999</value>
+                  <value>0.17000000000000001</value>
+                  <value>0.17999999999999999</value>
+                  <value>0.19</value>
+                  <value>0.20000000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,21, 0,22, 0,23 and 2 more&quot;'>
+                  <value>0.20999999999999999</value>
+                  <value>0.22</value>
+                  <value>0.23000000000000001</value>
+                  <value>0.23999999999999999</value>
+                  <value>0.25</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,26, 0,27, 0,28 and 2 more&quot;'>
+                  <value>0.26000000000000001</value>
+                  <value>0.27000000000000002</value>
+                  <value>0.28000000000000003</value>
+                  <value>0.28999999999999998</value>
+                  <value>0.29999999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,31, 0,32, 0,33 and 2 more&quot;'>
+                  <value>0.31</value>
+                  <value>0.32000000000000001</value>
+                  <value>0.33000000000000002</value>
+                  <value>0.34000000000000002</value>
+                  <value>0.34999999999999998</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,36, 0,37, 0,38 and 2 more&quot;'>
+                  <value>0.35999999999999999</value>
+                  <value>0.37</value>
+                  <value>0.38</value>
+                  <value>0.39000000000000001</value>
+                  <value>0.40000000000000002</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,41, 0,42, 0,43 and 2 more&quot;'>
+                  <value>0.40999999999999998</value>
+                  <value>0.41999999999999998</value>
+                  <value>0.42999999999999999</value>
+                  <value>0.44</value>
+                  <value>0.45000000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,46, 0,47, 0,48 and 2 more&quot;'>
+                  <value>0.46000000000000002</value>
+                  <value>0.46999999999999997</value>
+                  <value>0.47999999999999998</value>
+                  <value>0.48999999999999999</value>
+                  <value>0.5</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,51, 0,52, 0,53 and 2 more&quot;'>
+                  <value>0.51000000000000001</value>
+                  <value>0.52000000000000002</value>
+                  <value>0.53000000000000003</value>
+                  <value>0.54000000000000004</value>
+                  <value>0.55000000000000004</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,56, 0,57, 0,58 and 2 more&quot;'>
+                  <value>0.56000000000000005</value>
+                  <value>0.56999999999999995</value>
+                  <value>0.57999999999999996</value>
+                  <value>0.58999999999999997</value>
+                  <value>0.59999999999999998</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,61, 0,62, 0,63 and 2 more&quot;'>
+                  <value>0.60999999999999999</value>
+                  <value>0.62</value>
+                  <value>0.63</value>
+                  <value>0.64000000000000001</value>
+                  <value>0.65000000000000002</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,66, 0,67, 0,68 and 2 more&quot;'>
+                  <value>0.66000000000000003</value>
+                  <value>0.67000000000000004</value>
+                  <value>0.68000000000000005</value>
+                  <value>0.68999999999999995</value>
+                  <value>0.69999999999999996</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,71, 0,72, 0,73 and 2 more&quot;'>
+                  <value>0.70999999999999996</value>
+                  <value>0.71999999999999997</value>
+                  <value>0.72999999999999998</value>
+                  <value>0.73999999999999999</value>
+                  <value>0.75</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,76, 0,77, 0,78 and 2 more&quot;'>
+                  <value>0.76000000000000001</value>
+                  <value>0.77000000000000002</value>
+                  <value>0.78000000000000003</value>
+                  <value>0.79000000000000004</value>
+                  <value>0.80000000000000004</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,81, 0,82, 0,83 and 2 more&quot;'>
+                  <value>0.81000000000000005</value>
+                  <value>0.81999999999999995</value>
+                  <value>0.82999999999999996</value>
+                  <value>0.83999999999999997</value>
+                  <value>0.84999999999999998</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,86, 0,87, 0,88 and 2 more&quot;'>
+                  <value>0.85999999999999999</value>
+                  <value>0.87</value>
+                  <value>0.88</value>
+                  <value>0.89000000000000001</value>
+                  <value>0.90000000000000002</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,91, 0,92, 0,93 and 2 more&quot;'>
+                  <value>0.91000000000000003</value>
+                  <value>0.92000000000000004</value>
+                  <value>0.93000000000000005</value>
+                  <value>0.93999999999999995</value>
+                  <value>0.94999999999999996</value>
+                </bin>
+                <bin default-name='true' value='&quot;0,96, 0,97, 0,98 and 2 more&quot;'>
+                  <value>0.95999999999999996</value>
+                  <value>0.96999999999999997</value>
+                  <value>0.97999999999999998</value>
+                  <value>0.98999999999999999</value>
+                  <value>1.0</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,01, 1,02, 1,03 and 2 more&quot;'>
+                  <value>1.01</value>
+                  <value>1.02</value>
+                  <value>1.03</value>
+                  <value>1.04</value>
+                  <value>1.05</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,06, 1,07, 1,08 and 2 more&quot;'>
+                  <value>1.0600000000000001</value>
+                  <value>1.0700000000000001</value>
+                  <value>1.0800000000000001</value>
+                  <value>1.0900000000000001</value>
+                  <value>1.1000000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,11, 1,12, 1,13 and 2 more&quot;'>
+                  <value>1.1100000000000001</value>
+                  <value>1.1200000000000001</value>
+                  <value>1.1299999999999999</value>
+                  <value>1.1399999999999999</value>
+                  <value>1.1499999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,16, 1,17, 1,18 and 2 more&quot;'>
+                  <value>1.1599999999999999</value>
+                  <value>1.1699999999999999</value>
+                  <value>1.1799999999999999</value>
+                  <value>1.1899999999999999</value>
+                  <value>1.2</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,21, 1,22, 1,23 and 2 more&quot;'>
+                  <value>1.21</value>
+                  <value>1.22</value>
+                  <value>1.23</value>
+                  <value>1.24</value>
+                  <value>1.25</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,26, 1,27, 1,28 and 2 more&quot;'>
+                  <value>1.26</value>
+                  <value>1.27</value>
+                  <value>1.28</value>
+                  <value>1.29</value>
+                  <value>1.3</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,31, 1,32, 1,33 and 2 more&quot;'>
+                  <value>1.3100000000000001</value>
+                  <value>1.3200000000000001</value>
+                  <value>1.3300000000000001</value>
+                  <value>1.3400000000000001</value>
+                  <value>1.3500000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,36, 1,37, 1,38 and 2 more&quot;'>
+                  <value>1.3600000000000001</value>
+                  <value>1.3700000000000001</value>
+                  <value>1.3799999999999999</value>
+                  <value>1.3899999999999999</value>
+                  <value>1.3999999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,41, 1,42, 1,43 and 2 more&quot;'>
+                  <value>1.4099999999999999</value>
+                  <value>1.4199999999999999</value>
+                  <value>1.4299999999999999</value>
+                  <value>1.4399999999999999</value>
+                  <value>1.45</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,46, 1,47, 1,48 and 2 more&quot;'>
+                  <value>1.46</value>
+                  <value>1.47</value>
+                  <value>1.48</value>
+                  <value>1.49</value>
+                  <value>1.5</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,51, 1,52, 1,53 and 2 more&quot;'>
+                  <value>1.51</value>
+                  <value>1.52</value>
+                  <value>1.53</value>
+                  <value>1.54</value>
+                  <value>1.55</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,56, 1,57, 1,58 and 2 more&quot;'>
+                  <value>1.5600000000000001</value>
+                  <value>1.5700000000000001</value>
+                  <value>1.5800000000000001</value>
+                  <value>1.5900000000000001</value>
+                  <value>1.6000000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,61, 1,62, 1,63 and 2 more&quot;'>
+                  <value>1.6100000000000001</value>
+                  <value>1.6200000000000001</value>
+                  <value>1.6299999999999999</value>
+                  <value>1.6399999999999999</value>
+                  <value>1.6499999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,66, 1,67, 1,68 and 2 more&quot;'>
+                  <value>1.6599999999999999</value>
+                  <value>1.6699999999999999</value>
+                  <value>1.6799999999999999</value>
+                  <value>1.6899999999999999</value>
+                  <value>1.7</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,71, 1,72, 1,73 and 2 more&quot;'>
+                  <value>1.71</value>
+                  <value>1.72</value>
+                  <value>1.73</value>
+                  <value>1.74</value>
+                  <value>1.75</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,76, 1,77, 1,78 and 2 more&quot;'>
+                  <value>1.76</value>
+                  <value>1.77</value>
+                  <value>1.78</value>
+                  <value>1.79</value>
+                  <value>1.8</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,81, 1,82, 1,83 and 2 more&quot;'>
+                  <value>1.8100000000000001</value>
+                  <value>1.8200000000000001</value>
+                  <value>1.8300000000000001</value>
+                  <value>1.8400000000000001</value>
+                  <value>1.8500000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,86, 1,87, 1,88 and 2 more&quot;'>
+                  <value>1.8600000000000001</value>
+                  <value>1.8700000000000001</value>
+                  <value>1.8799999999999999</value>
+                  <value>1.8899999999999999</value>
+                  <value>1.8999999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,91, 1,92, 1,93 and 2 more&quot;'>
+                  <value>1.9099999999999999</value>
+                  <value>1.9199999999999999</value>
+                  <value>1.9299999999999999</value>
+                  <value>1.9399999999999999</value>
+                  <value>1.95</value>
+                </bin>
+                <bin default-name='true' value='&quot;1,96, 1,97, 1,98 and 2 more&quot;'>
+                  <value>1.96</value>
+                  <value>1.97</value>
+                  <value>1.98</value>
+                  <value>1.99</value>
+                  <value>2.0</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,01, 2,02, 2,03 and 2 more&quot;'>
+                  <value>2.0099999999999998</value>
+                  <value>2.02</value>
+                  <value>2.0299999999999998</value>
+                  <value>2.04</value>
+                  <value>2.0499999999999998</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,06, 2,07, 2,08 and 2 more&quot;'>
+                  <value>2.0600000000000001</value>
+                  <value>2.0699999999999998</value>
+                  <value>2.0800000000000001</value>
+                  <value>2.0899999999999999</value>
+                  <value>2.1000000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,11, 2,12, 2,13 and 2 more&quot;'>
+                  <value>2.1099999999999999</value>
+                  <value>2.1200000000000001</value>
+                  <value>2.1299999999999999</value>
+                  <value>2.1400000000000001</value>
+                  <value>2.1499999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,16, 2,17, 2,18 and 2 more&quot;'>
+                  <value>2.1600000000000001</value>
+                  <value>2.1699999999999999</value>
+                  <value>2.1800000000000002</value>
+                  <value>2.1899999999999999</value>
+                  <value>2.2000000000000002</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,21, 2,22, 2,23 and 2 more&quot;'>
+                  <value>2.21</value>
+                  <value>2.2200000000000002</value>
+                  <value>2.23</value>
+                  <value>2.2400000000000002</value>
+                  <value>2.25</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,26, 2,27, 2,28 and 2 more&quot;'>
+                  <value>2.2599999999999998</value>
+                  <value>2.27</value>
+                  <value>2.2799999999999998</value>
+                  <value>2.29</value>
+                  <value>2.2999999999999998</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,31, 2,32, 2,33 and 2 more&quot;'>
+                  <value>2.3100000000000001</value>
+                  <value>2.3199999999999998</value>
+                  <value>2.3300000000000001</value>
+                  <value>2.3399999999999999</value>
+                  <value>2.3500000000000001</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,36, 2,37, 2,38 and 2 more&quot;'>
+                  <value>2.3599999999999999</value>
+                  <value>2.3700000000000001</value>
+                  <value>2.3799999999999999</value>
+                  <value>2.3900000000000001</value>
+                  <value>2.3999999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,42, 2,43, 2,44 and 1 more&quot;'>
+                  <value>2.4199999999999999</value>
+                  <value>2.4300000000000002</value>
+                  <value>2.4399999999999999</value>
+                  <value>2.4500000000000002</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,46, 2,48, 2,49 and 1 more&quot;'>
+                  <value>2.46</value>
+                  <value>2.48</value>
+                  <value>2.4900000000000002</value>
+                  <value>2.5</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,51, 2,53, 2,54 and 1 more&quot;'>
+                  <value>2.5099999999999998</value>
+                  <value>2.5299999999999998</value>
+                  <value>2.54</value>
+                  <value>2.5499999999999998</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,56, 2,57, 2,59&quot;'>
+                  <value>2.5600000000000001</value>
+                  <value>2.5699999999999998</value>
+                  <value>2.5899999999999999</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,66, 2,67, 2,68&quot;'>
+                  <value>2.6600000000000001</value>
+                  <value>2.6699999999999999</value>
+                  <value>2.6800000000000002</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,71 &amp; 2,72&quot;'>
+                  <value>2.71</value>
+                  <value>2.7200000000000002</value>
+                </bin>
+                <bin default-name='true' value='&quot;2,81, 2,82, 2,83&quot;'>
+                  <value>2.8100000000000001</value>
+                  <value>2.8199999999999998</value>
+                  <value>2.8300000000000001</value>
+                </bin>
+              </calculation>
+            </column>
+            <column-instance column='[Calculation_1034139076755251200]' derivation='Count' name='[cnt:Calculation_1034139076755251200:qk]' pivot='key' type='quantitative' />
+            <column caption='Event Tier' datatype='string' name='[event_tier]' role='dimension' type='nominal' />
+            <column-instance column='[event_tier]' derivation='None' name='[none:event_tier:nk]' pivot='key' type='nominal' />
+            <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
+            <column-instance column='[player_team]' derivation='None' name='[none:player_team:nk]' pivot='key' type='nominal' />
+            <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+            <column caption='Player Team' datatype='string' name='[player_team]' role='dimension' type='nominal' />
+            <column caption='Rating2.0' datatype='string' hidden='true' name='[rating2.0]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:event_tier:nk]'>
+            <groupfilter function='level-members' level='[none:event_tier:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]'>
+            <groupfilter function='level-members' level='[none:player:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player_team:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:player_team:nk]' member='&quot;Astralis&quot;' />
+              <groupfilter function='member' level='[none:player_team:nk]' member='&quot;G2&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]</column>
+            <column>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:event_tier:nk]</column>
+            <column>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player_team:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[cnt:Calculation_1034139076755251200:qk]</rows>
+        <cols>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[Rating (group)]</cols>
+      </table>
+      <simple-id uuid='{F9725AB6-F385-475D-82A9-A7D5A19ADD93}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player_team:nk]' type='filter' />
+            <card param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:event_tier:nk]' type='filter' />
+            <card mode='checkdropdown' param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[Rating (group)]</field>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:event_tier:nk]</field>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]</field>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player_team:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B2665A56-4C97-4718-A0C3-CB8BEBBC3D09}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
