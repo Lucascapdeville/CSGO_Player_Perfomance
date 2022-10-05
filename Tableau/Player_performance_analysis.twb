@@ -31,7 +31,7 @@
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1q8n8mg05frl9e17xeqns127ucdd' name='players_stats.csv' table='[players_stats#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=';'>
             <column datatype='integer' name='F1' ordinal='0' />
-            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='string' name='id' ordinal='1' />
             <column datatype='string' name='player' ordinal='2' />
             <column datatype='string' name='player_team' ordinal='3' />
             <column datatype='integer' name='s1' ordinal='4' />
@@ -49,7 +49,7 @@
         <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1q8n8mg05frl9e17xeqns127ucdd' name='players_stats.csv' table='[players_stats#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=';'>
             <column datatype='integer' name='F1' ordinal='0' />
-            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='string' name='id' ordinal='1' />
             <column datatype='string' name='player' ordinal='2' />
             <column datatype='string' name='player_team' ordinal='3' />
             <column datatype='integer' name='s1' ordinal='4' />
@@ -97,14 +97,17 @@
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>id</remote-name>
-            <remote-type>20</remote-type>
+            <remote-type>129</remote-type>
             <local-name>[id]</local-name>
             <parent-name>[players_stats.csv]</parent-name>
             <remote-alias>id</remote-alias>
             <ordinal>1</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>player</remote-name>
@@ -277,369 +280,18 @@
       <column caption='Round diference' datatype='integer' name='[Calculation_1871527136286859266]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[s1] - [s2]' />
       </column>
-      <column datatype='integer' hidden='true' name='[F1]' role='measure' type='quantitative' />
-      <column datatype='string' name='[Rating (group)]' role='dimension' type='nominal'>
-        <calculation class='categorical-bin' column='[Calculation_1034139076755251200]' new-bin='true'>
-          <bin default-name='true' value='&quot;0,14, 0,15, 0,17 and 3 more&quot;'>
-            <value>0.14000000000000001</value>
-            <value>0.14999999999999999</value>
-            <value>0.17000000000000001</value>
-            <value>0.17999999999999999</value>
-            <value>0.19</value>
-            <value>0.20000000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,21, 0,22, 0,23 and 2 more&quot;'>
-            <value>0.20999999999999999</value>
-            <value>0.22</value>
-            <value>0.23000000000000001</value>
-            <value>0.23999999999999999</value>
-            <value>0.25</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,26, 0,27, 0,28 and 2 more&quot;'>
-            <value>0.26000000000000001</value>
-            <value>0.27000000000000002</value>
-            <value>0.28000000000000003</value>
-            <value>0.28999999999999998</value>
-            <value>0.29999999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,31, 0,32, 0,33 and 2 more&quot;'>
-            <value>0.31</value>
-            <value>0.32000000000000001</value>
-            <value>0.33000000000000002</value>
-            <value>0.34000000000000002</value>
-            <value>0.34999999999999998</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,36, 0,37, 0,38 and 2 more&quot;'>
-            <value>0.35999999999999999</value>
-            <value>0.37</value>
-            <value>0.38</value>
-            <value>0.39000000000000001</value>
-            <value>0.40000000000000002</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,41, 0,42, 0,43 and 2 more&quot;'>
-            <value>0.40999999999999998</value>
-            <value>0.41999999999999998</value>
-            <value>0.42999999999999999</value>
-            <value>0.44</value>
-            <value>0.45000000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,46, 0,47, 0,48 and 2 more&quot;'>
-            <value>0.46000000000000002</value>
-            <value>0.46999999999999997</value>
-            <value>0.47999999999999998</value>
-            <value>0.48999999999999999</value>
-            <value>0.5</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,51, 0,52, 0,53 and 2 more&quot;'>
-            <value>0.51000000000000001</value>
-            <value>0.52000000000000002</value>
-            <value>0.53000000000000003</value>
-            <value>0.54000000000000004</value>
-            <value>0.55000000000000004</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,56, 0,57, 0,58 and 2 more&quot;'>
-            <value>0.56000000000000005</value>
-            <value>0.56999999999999995</value>
-            <value>0.57999999999999996</value>
-            <value>0.58999999999999997</value>
-            <value>0.59999999999999998</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,61, 0,62, 0,63 and 2 more&quot;'>
-            <value>0.60999999999999999</value>
-            <value>0.62</value>
-            <value>0.63</value>
-            <value>0.64000000000000001</value>
-            <value>0.65000000000000002</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,66, 0,67, 0,68 and 2 more&quot;'>
-            <value>0.66000000000000003</value>
-            <value>0.67000000000000004</value>
-            <value>0.68000000000000005</value>
-            <value>0.68999999999999995</value>
-            <value>0.69999999999999996</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,71, 0,72, 0,73 and 2 more&quot;'>
-            <value>0.70999999999999996</value>
-            <value>0.71999999999999997</value>
-            <value>0.72999999999999998</value>
-            <value>0.73999999999999999</value>
-            <value>0.75</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,76, 0,77, 0,78 and 2 more&quot;'>
-            <value>0.76000000000000001</value>
-            <value>0.77000000000000002</value>
-            <value>0.78000000000000003</value>
-            <value>0.79000000000000004</value>
-            <value>0.80000000000000004</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,81, 0,82, 0,83 and 2 more&quot;'>
-            <value>0.81000000000000005</value>
-            <value>0.81999999999999995</value>
-            <value>0.82999999999999996</value>
-            <value>0.83999999999999997</value>
-            <value>0.84999999999999998</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,86, 0,87, 0,88 and 2 more&quot;'>
-            <value>0.85999999999999999</value>
-            <value>0.87</value>
-            <value>0.88</value>
-            <value>0.89000000000000001</value>
-            <value>0.90000000000000002</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,91, 0,92, 0,93 and 2 more&quot;'>
-            <value>0.91000000000000003</value>
-            <value>0.92000000000000004</value>
-            <value>0.93000000000000005</value>
-            <value>0.93999999999999995</value>
-            <value>0.94999999999999996</value>
-          </bin>
-          <bin default-name='true' value='&quot;0,96, 0,97, 0,98 and 2 more&quot;'>
-            <value>0.95999999999999996</value>
-            <value>0.96999999999999997</value>
-            <value>0.97999999999999998</value>
-            <value>0.98999999999999999</value>
-            <value>1.0</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,01, 1,02, 1,03 and 2 more&quot;'>
-            <value>1.01</value>
-            <value>1.02</value>
-            <value>1.03</value>
-            <value>1.04</value>
-            <value>1.05</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,06, 1,07, 1,08 and 2 more&quot;'>
-            <value>1.0600000000000001</value>
-            <value>1.0700000000000001</value>
-            <value>1.0800000000000001</value>
-            <value>1.0900000000000001</value>
-            <value>1.1000000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,11, 1,12, 1,13 and 2 more&quot;'>
-            <value>1.1100000000000001</value>
-            <value>1.1200000000000001</value>
-            <value>1.1299999999999999</value>
-            <value>1.1399999999999999</value>
-            <value>1.1499999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,16, 1,17, 1,18 and 2 more&quot;'>
-            <value>1.1599999999999999</value>
-            <value>1.1699999999999999</value>
-            <value>1.1799999999999999</value>
-            <value>1.1899999999999999</value>
-            <value>1.2</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,21, 1,22, 1,23 and 2 more&quot;'>
-            <value>1.21</value>
-            <value>1.22</value>
-            <value>1.23</value>
-            <value>1.24</value>
-            <value>1.25</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,26, 1,27, 1,28 and 2 more&quot;'>
-            <value>1.26</value>
-            <value>1.27</value>
-            <value>1.28</value>
-            <value>1.29</value>
-            <value>1.3</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,31, 1,32, 1,33 and 2 more&quot;'>
-            <value>1.3100000000000001</value>
-            <value>1.3200000000000001</value>
-            <value>1.3300000000000001</value>
-            <value>1.3400000000000001</value>
-            <value>1.3500000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,36, 1,37, 1,38 and 2 more&quot;'>
-            <value>1.3600000000000001</value>
-            <value>1.3700000000000001</value>
-            <value>1.3799999999999999</value>
-            <value>1.3899999999999999</value>
-            <value>1.3999999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,41, 1,42, 1,43 and 2 more&quot;'>
-            <value>1.4099999999999999</value>
-            <value>1.4199999999999999</value>
-            <value>1.4299999999999999</value>
-            <value>1.4399999999999999</value>
-            <value>1.45</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,46, 1,47, 1,48 and 2 more&quot;'>
-            <value>1.46</value>
-            <value>1.47</value>
-            <value>1.48</value>
-            <value>1.49</value>
-            <value>1.5</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,51, 1,52, 1,53 and 2 more&quot;'>
-            <value>1.51</value>
-            <value>1.52</value>
-            <value>1.53</value>
-            <value>1.54</value>
-            <value>1.55</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,56, 1,57, 1,58 and 2 more&quot;'>
-            <value>1.5600000000000001</value>
-            <value>1.5700000000000001</value>
-            <value>1.5800000000000001</value>
-            <value>1.5900000000000001</value>
-            <value>1.6000000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,61, 1,62, 1,63 and 2 more&quot;'>
-            <value>1.6100000000000001</value>
-            <value>1.6200000000000001</value>
-            <value>1.6299999999999999</value>
-            <value>1.6399999999999999</value>
-            <value>1.6499999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,66, 1,67, 1,68 and 2 more&quot;'>
-            <value>1.6599999999999999</value>
-            <value>1.6699999999999999</value>
-            <value>1.6799999999999999</value>
-            <value>1.6899999999999999</value>
-            <value>1.7</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,71, 1,72, 1,73 and 2 more&quot;'>
-            <value>1.71</value>
-            <value>1.72</value>
-            <value>1.73</value>
-            <value>1.74</value>
-            <value>1.75</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,76, 1,77, 1,78 and 2 more&quot;'>
-            <value>1.76</value>
-            <value>1.77</value>
-            <value>1.78</value>
-            <value>1.79</value>
-            <value>1.8</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,81, 1,82, 1,83 and 2 more&quot;'>
-            <value>1.8100000000000001</value>
-            <value>1.8200000000000001</value>
-            <value>1.8300000000000001</value>
-            <value>1.8400000000000001</value>
-            <value>1.8500000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,86, 1,87, 1,88 and 2 more&quot;'>
-            <value>1.8600000000000001</value>
-            <value>1.8700000000000001</value>
-            <value>1.8799999999999999</value>
-            <value>1.8899999999999999</value>
-            <value>1.8999999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,91, 1,92, 1,93 and 2 more&quot;'>
-            <value>1.9099999999999999</value>
-            <value>1.9199999999999999</value>
-            <value>1.9299999999999999</value>
-            <value>1.9399999999999999</value>
-            <value>1.95</value>
-          </bin>
-          <bin default-name='true' value='&quot;1,96, 1,97, 1,98 and 2 more&quot;'>
-            <value>1.96</value>
-            <value>1.97</value>
-            <value>1.98</value>
-            <value>1.99</value>
-            <value>2.0</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,01, 2,02, 2,03 and 2 more&quot;'>
-            <value>2.0099999999999998</value>
-            <value>2.02</value>
-            <value>2.0299999999999998</value>
-            <value>2.04</value>
-            <value>2.0499999999999998</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,06, 2,07, 2,08 and 2 more&quot;'>
-            <value>2.0600000000000001</value>
-            <value>2.0699999999999998</value>
-            <value>2.0800000000000001</value>
-            <value>2.0899999999999999</value>
-            <value>2.1000000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,11, 2,12, 2,13 and 2 more&quot;'>
-            <value>2.1099999999999999</value>
-            <value>2.1200000000000001</value>
-            <value>2.1299999999999999</value>
-            <value>2.1400000000000001</value>
-            <value>2.1499999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,16, 2,17, 2,18 and 2 more&quot;'>
-            <value>2.1600000000000001</value>
-            <value>2.1699999999999999</value>
-            <value>2.1800000000000002</value>
-            <value>2.1899999999999999</value>
-            <value>2.2000000000000002</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,21, 2,22, 2,23 and 2 more&quot;'>
-            <value>2.21</value>
-            <value>2.2200000000000002</value>
-            <value>2.23</value>
-            <value>2.2400000000000002</value>
-            <value>2.25</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,26, 2,27, 2,28 and 2 more&quot;'>
-            <value>2.2599999999999998</value>
-            <value>2.27</value>
-            <value>2.2799999999999998</value>
-            <value>2.29</value>
-            <value>2.2999999999999998</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,31, 2,32, 2,33 and 2 more&quot;'>
-            <value>2.3100000000000001</value>
-            <value>2.3199999999999998</value>
-            <value>2.3300000000000001</value>
-            <value>2.3399999999999999</value>
-            <value>2.3500000000000001</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,36, 2,37, 2,38 and 2 more&quot;'>
-            <value>2.3599999999999999</value>
-            <value>2.3700000000000001</value>
-            <value>2.3799999999999999</value>
-            <value>2.3900000000000001</value>
-            <value>2.3999999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,42, 2,43, 2,44 and 1 more&quot;'>
-            <value>2.4199999999999999</value>
-            <value>2.4300000000000002</value>
-            <value>2.4399999999999999</value>
-            <value>2.4500000000000002</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,46, 2,48, 2,49 and 1 more&quot;'>
-            <value>2.46</value>
-            <value>2.48</value>
-            <value>2.4900000000000002</value>
-            <value>2.5</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,51, 2,53, 2,54 and 1 more&quot;'>
-            <value>2.5099999999999998</value>
-            <value>2.5299999999999998</value>
-            <value>2.54</value>
-            <value>2.5499999999999998</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,56, 2,57, 2,59&quot;'>
-            <value>2.5600000000000001</value>
-            <value>2.5699999999999998</value>
-            <value>2.5899999999999999</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,66, 2,67, 2,68&quot;'>
-            <value>2.6600000000000001</value>
-            <value>2.6699999999999999</value>
-            <value>2.6800000000000002</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,71 &amp; 2,72&quot;'>
-            <value>2.71</value>
-            <value>2.7200000000000002</value>
-          </bin>
-          <bin default-name='true' value='&quot;2,81, 2,82, 2,83&quot;'>
-            <value>2.8100000000000001</value>
-            <value>2.8199999999999998</value>
-            <value>2.8300000000000001</value>
-          </bin>
-        </calculation>
+      <column aggregation='Sum' caption='Rank diference' datatype='integer' name='[Calculation_1871527136290009091]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT([team_rank]) - INT([opponent_rank])' />
       </column>
+      <column caption='Win or lose' datatype='string' name='[Calculation_1871527136291209220]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1871527136286859266] &lt; 0 THEN &quot;Lose&quot; ELSE &quot;Win&quot; End' />
+      </column>
+      <column datatype='integer' hidden='true' name='[F1]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='players_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]' role='measure' type='quantitative' />
       <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
       <column caption='Event Tier' datatype='string' name='[event_tier]' role='dimension' type='nominal' />
       <column caption='Event Type' datatype='string' name='[event_type]' role='dimension' type='nominal' />
-      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
       <column caption='Map' datatype='string' name='[map]' role='dimension' type='nominal' />
       <column caption='Opponent' datatype='string' name='[opponent]' role='dimension' type='nominal' />
       <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
@@ -648,7 +300,8 @@
       <column caption='S1' datatype='integer' name='[s1]' role='measure' type='quantitative' />
       <column caption='S2' datatype='integer' name='[s2]' role='measure' type='quantitative' />
       <column-instance column='[Calculation_1871527136284016641]' derivation='None' name='[none:Calculation_1871527136284016641:nk]' pivot='key' type='nominal' />
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <column-instance column='[Calculation_1871527136291209220]' derivation='None' name='[none:Calculation_1871527136291209220:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='1' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[none:Calculation_1871527136284016641:nk]' type='palette'>
@@ -660,6 +313,14 @@
             </map>
             <map to='#f28e2b'>
               <bucket>&quot;Favorite&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1871527136291209220:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Lose&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Win&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -688,7 +349,7 @@
               <relation connection='textscan.1q8n8mg05frl9e17xeqns127ucdd' name='players_stats.csv' table='[players_stats#csv]' type='table'>
                 <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=';'>
                   <column datatype='integer' name='F1' ordinal='0' />
-                  <column datatype='integer' name='id' ordinal='1' />
+                  <column datatype='string' name='id' ordinal='1' />
                   <column datatype='string' name='player' ordinal='2' />
                   <column datatype='string' name='player_team' ordinal='3' />
                   <column datatype='integer' name='s1' ordinal='4' />
@@ -717,37 +378,40 @@
             <datasource caption='players_stats' name='federated.0ux2u801vyb8kc1baarkv0ugm5nr' />
           </datasources>
           <datasource-dependencies datasource='federated.0ux2u801vyb8kc1baarkv0ugm5nr'>
-            <column caption='Favorite' datatype='string' name='[Calculation_1871527136284016641]' role='dimension' type='nominal'>
-              <calculation class='tableau' formula='IF(INT([team_rank]) - INT([opponent_rank]))&lt;0 THEN &apos;Favorite&apos;&#13;&#10;Else &apos;Underdog&apos; END' />
+            <column caption='Rating' datatype='real' name='[Calculation_1034139076755251200]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT([rating2.0])' />
             </column>
             <column caption='Round diference' datatype='integer' name='[Calculation_1871527136286859266]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='[s1] - [s2]' />
             </column>
-            <_.fcp.ObjectModelTableType.false...column caption='players_stats.csv' datatype='integer' name='[__tableau_internal_object_id__].[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]' role='measure' type='quantitative' />
-            <column-instance column='[__tableau_internal_object_id__].[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:players_stats.csv_AE62473119AF450A8FD56089E88ACAB4:qk]' pivot='key' type='quantitative' />
-            <_.fcp.ObjectModelTableType.true...column caption='players_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[players_stats.csv_AE62473119AF450A8FD56089E88ACAB4]' role='measure' type='quantitative' />
+            <column caption='Win or lose' datatype='string' name='[Calculation_1871527136291209220]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_1871527136286859266] &lt; 0 THEN &quot;Lose&quot; ELSE &quot;Win&quot; End' />
+            </column>
+            <column-instance column='[Calculation_1034139076755251200]' derivation='Count' name='[cnt:Calculation_1034139076755251200:qk]' pivot='key' type='quantitative' />
             <column caption='Event Tier' datatype='string' name='[event_tier]' role='dimension' type='nominal' />
-            <column-instance column='[Calculation_1871527136284016641]' derivation='None' name='[none:Calculation_1871527136284016641:nk]' pivot='key' type='nominal' />
+            <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1034139076755251200]' derivation='None' name='[none:Calculation_1034139076755251200:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_1871527136286859266]' derivation='None' name='[none:Calculation_1871527136286859266:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1871527136291209220]' derivation='None' name='[none:Calculation_1871527136291209220:nk]' pivot='key' type='nominal' />
             <column-instance column='[event_tier]' derivation='None' name='[none:event_tier:nk]' pivot='key' type='nominal' />
+            <column-instance column='[id]' derivation='None' name='[none:id:ok]' pivot='key' type='nominal' />
             <column-instance column='[player]' derivation='None' name='[none:player:nk]' pivot='key' type='nominal' />
             <column-instance column='[player_team]' derivation='None' name='[none:player_team:nk]' pivot='key' type='nominal' />
-            <column datatype='string' name='[opponent_rank]' role='dimension' type='nominal' />
             <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
             <column caption='Player Team' datatype='string' name='[player_team]' role='dimension' type='nominal' />
+            <column caption='Rating2.0' datatype='string' hidden='true' name='[rating2.0]' role='dimension' type='nominal' />
             <column caption='S1' datatype='integer' name='[s1]' role='measure' type='quantitative' />
             <column caption='S2' datatype='integer' name='[s2]' role='measure' type='quantitative' />
-            <column datatype='string' name='[team_rank]' role='dimension' type='nominal' />
           </datasource-dependencies>
           <filter class='quantitative' column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136286859266:qk]' included-values='in-range'>
-            <min>-16</min>
-            <max>16</max>
+            <min>-3</min>
+            <max>3</max>
           </filter>
           <filter class='categorical' column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:event_tier:nk]'>
             <groupfilter function='level-members' level='[none:event_tier:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]'>
-            <groupfilter function='member' level='[none:player:nk]' member='&quot;zywoo&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='level-members' level='[none:player:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player_team:nk]'>
             <groupfilter function='level-members' level='[none:player_team:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -760,11 +424,7 @@
           </slices>
           <aggregation value='true' />
         </view>
-        <style>
-          <style-rule element='mark'>
-            <encoding attr='size-bar' field='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[__tableau_internal_object_id__].[cnt:players_stats.csv_AE62473119AF450A8FD56089E88ACAB4:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
-          </style-rule>
-        </style>
+        <style />
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
@@ -772,13 +432,11 @@
             </view>
             <mark class='Circle' />
             <encodings>
-              <size column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[__tableau_internal_object_id__].[cnt:players_stats.csv_AE62473119AF450A8FD56089E88ACAB4:qk]' />
-              <text column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136284016641:nk]' />
-              <color column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136284016641:nk]' />
+              <color column='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136291209220:nk]' />
             </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
             <style>
               <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
                 <format attr='mark-labels-line-first' value='true' />
                 <format attr='mark-labels-line-last' value='true' />
@@ -787,12 +445,13 @@
                 <format attr='mark-labels-mode' value='all' />
                 <format attr='mark-labels-range-scope' value='pane' />
                 <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='false' />
               </style-rule>
             </style>
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>(([federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk] / [federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:id:ok]) * [federated.0ux2u801vyb8kc1baarkv0ugm5nr].[cnt:Calculation_1034139076755251200:qk])</rows>
+        <cols>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1034139076755251200:qk]</cols>
       </table>
       <simple-id uuid='{F9725AB6-F385-475D-82A9-A7D5A19ADD93}' />
     </worksheet>
@@ -820,11 +479,11 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]' type='filter' />
             <card mode='checkdropdown' param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player_team:nk]' type='filter' />
             <card param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:event_tier:nk]' type='filter' />
-            <card mode='checkdropdown' param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]' type='filter' />
             <card param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136286859266:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
-            <card pane-specification-id='0' param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136284016641:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136291209220:nk]' type='color' />
           </strip>
         </edge>
       </cards>
@@ -834,9 +493,13 @@
             <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[Rating (group)]</field>
             <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[attr:Calculation_1871527136284016641:qk]</field>
             <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136284016641:nk]</field>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136290009091:ok]</field>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:Calculation_1871527136291209220:nk]</field>
             <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:event_tier:nk]</field>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:id:ok]</field>
             <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player:nk]</field>
             <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:player_team:nk]</field>
+            <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[none:team_rank:nk]</field>
             <field>[federated.0ux2u801vyb8kc1baarkv0ugm5nr].[yr:date:ok]</field>
           </color-one-way>
         </highlight>
@@ -847,102 +510,245 @@
   <thumbnails>
     <thumbnail height='192' name='Sheet 1' width='192'>
       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
-      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
-      cXs3vEAVmyQAAAAASUVORK5CYII=
+      AAAgAElEQVR4nO29eZQcx33n+YnIzLr7qK6+0I1G475B8BRFSiRNXZRFSdbKHtnWjrwzlrxe
+      j+ydtb3efWPPW88be7y787zj51nbGo13dFi2LI8vSWNREiVRFikeoogbBIi7uwH03V1dd1Vm
+      RsT+UX2iuoG+QKDU+XkPD11Z+cuIzMpfRvwi4vdNYYwxBARsUOSdrsDtwhhD4NsBt+JH1gHK
+      5TK+79/pagTc5fzIOkBAwHIIHCBgQxM4QMCGxgZ+JIPFm52TMQYhxKqPuVrb1djdKduNcq72
+      zB/5fH5Vhd4pKuUyoUiEpU63UqnQ1NS06HdKKWzbXvS7m6G1RsrVNZqrLfNO2WqtEUKs6mas
+      p3O1oerlDQ0Nqyr0TpEdn6SprQ1n3rbMxCijU0V2bN+66osYsLGo27uke1tvzbZ8Pk+xUEIZ
+      jdYapdSiTzCt9aqGSLXWq+4urrbMO2U7c55a6zetzDthW5cO8Nr3nqMSbuHht9674ARs28Zx
+      LAQSKSWWZS3aEvi+v6oWQimFlHJV3YLVlnmnbGceHqvp8tXTudadAyjfJxKPMJYp1AxhdXRv
+      oaO7+rf3ptcsoB6pOwfIZyY4c/EqoXACRTCOG7A26s4BmlIdvPPJtzE05S4IgAGK2UmG00W2
+      9W6+I3ULqD/qzgEArvUPUBIxFGDN2z44NIy2IigVBMFrtd3wQfBaJkLmH0Nrg5Qwe98IAcYg
+      pFxyDP9WFMtlEqlUjX0qlWJofAqDCILgNdpuyCC4lM8wOJ6lKWoRCgtGxj1a2pIUcjm2bO5a
+      cYWGBq4wls4SisXxfEUYHxGKocpldh3cv+rmJ9ncRL5SG+YmWztItnYAEKwDDVgOC9zbsiyi
+      kTDnL1xgbGwCN59jaHIKweqa/db2dtxSAY1NPOIQjiZwLElLc+OqmtYZrl26xNXBUVZ/hICA
+      Kgsewp7v43o+e/bswY7EcaQFto292r6KEPTs3EdLIkSurHGEh3RiTI4NkcsWSDWvbva5dVMr
+      A+dHKRQrNMXCs9uN0fT1DbBt29ZVVjhgo7HAAeINzcQbmtft4KFInM5IHIBUdG57Ir59Tcd1
+      fYuuVJTzFwZ46PCu2e3jw4PkyxW0DoLgtdpu+CD4bsa4RbJehHffs3PBdsu28SpldBAEr9l2
+      QwbB9cLm7TupXJ2ojijNo6Wtk5a2TiCYCQ5YHnU3keqWsjz/wquUSuVVhuYBAXPUnQOEoo3s
+      2bWV1va2mspn0+Ocv3gFHXjGLbl4fZJ/89l/5PkT/Xe6KgsYmyryO59/nq98/9xN9zPG8Lff
+      O8O/+8ILTGSKqy6vLrtAQoBeJBiNJxqI5MuYYDn0LW2/9cNLHLswzFS+zKMHumu+fzOD4GpR
+      BgO8ePoqr50b5PW+UZ56aNvsd0pX/3mewlMa11P85XdO4/mazmSch/d34Xo+vjL4yqCNxlcG
+      z1dVO1+jjcFXGl/p6vGUrlMHkIKpdLqmCzQ8eI2yL6HOl0OXXZ8rQ2l2bU5hW3LF9Z25eY2p
+      PiiElNUbSSvU2DkIN/DOnTbpXDdvO9RDsaLwlcbzFb6u3iCZfBk5nRHmTt9Evq/n3UAa19f4
+      099pU73JPF/h+Qqj/eq+WqJN9eZdjJlLOTZVxCiP5uJF7t+xi3Akyn955sTMwgEsCXL8LOFU
+      L3Y8iW1JPvDoHtK5Ep2pBNfHC1gSwiEbq5zGLo0T27SfkG1j2xJbSqQUOLbEtiRSCBzbqj8H
+      qJSLxBuamKrkarpA3b07Fnz2L34HRO0TTGuNWcXohtYaISUgMNMLMQws+JvpaUPP2PjGQiPx
+      sagoiRYOavqzZyx8LJSxUMjq/tM31j8e6+P0lVHesreLPT0pKq6HmX16KbSevlmVxigPtALl
+      YpSLUT5Cu6B9hPIw2kMav7qfV4RKDolBI0g4UV4fcTj3XYllSUJW9eYouz7D6TyWlGxua6R/
+      ZIqQbfHQ3m5CjkVkej/Hkti2xJICS0rsSPU40i9hXvs0lnaJPfYvcWLNSLn0Q6Ps+vzn/3YE
+      47v8XOKbNLS+DXvPjy+89qNncS9/FmltI7T3l244wuTs7yMFVF79Q0xumNBbfwmZ3Aru0r9p
+      3TnA1fNniXbtxBk9heLmJ/DDKzk8z8P3Fb6uNod65n9jpptLjVIab3oBna8MvtYwb+2SsByM
+      DCFsBymt6c8Otu1gLAchLYQVRloWWjpIyyZkS2zLwpIC25LYliDk2NWnkCVx7Op31f8lDbbE
+      FgoLRWdcc1UW2dns89YtFmhDyDLYKCwhsNBYQmCjELPLAeOLXgOtFVJW9/H7X8I79l8BCdIm
+      8o7fRCQ6a2yGJ/P8l68dJdUU49EHdnP+G8dpbIjz8H37sJbx4FCVAm4IUIZwIomILJ6bPYOQ
+      PhUZxwir2rqGE7U2kQYQEpzokscTutrlFXYEIy1EpPHWZdebNqjRPufOniXZ2UNHaulJu1Kp
+      xOt9E1iWhWNbOI6FLavj2gJDJOQgpcCavjkdy0LO3qyL/8hvVhfIV5rB8Ryb2xqRUqzb2Lgx
+      Gp3uQzhxMArZuPT6rqGJLIlImIZ4mOHJPIloiEQ0tOwyZWUKtEI2dCzLZjJbAqNoqFzHbt2J
+      kNaC740xmKl+RLwdEYrd9FxNJYcpTSGbe25ZrjBV6k4VopDLE21ILDmMValUlowBlFJYlrWI
+      1c1ZiwOstsw7ZbtWVYh6Ode6VYXwyxUSDQ0sdbq2bU/nCN+YNnP3B8F3g+1GmQmuu3kAgPMn
+      j3DyQt+q8wkCAmaouyAYqp4+NZENZoID1kzdtQCDl9/g2mSOhoZEzXdT4yPBTHDAiqi7FqBc
+      qmD8CtpprPmuUChQKhYDYax1sA2WQ9+lbD9wmMaWVlw7UtN82Y6D4ziBMNY62AZB8F3MiVdf
+      5LnvvIS6YXtHVw/79+3BrsuzCrgT1F0LkB4dxA830J5IBKNAAWum7p6VyfYuujtSWIt0QwqZ
+      CS73XwtGhwKWTd21AADdm7cQS3o1LcDQ8AhKhgNhrHWw3fBBcHVNvaku/lplX8OY6pprgUYZ
+      gSVBSAvfc7FtB8/zCIVCKw4qTx47ArE2ercuXOvR2trK0NgURgQ5wWu13ShBcI0w1vWxzKww
+      1rX+NM093UilCElDPpdj89ZtWMv8/d1SgYHhcVobI1y6NkZXW4xQKMXAwHkikSi5gsuuvftp
+      aYze+mDzEZJoJFzTAjSn2mlOtQOBMFbA8ljg3kIIQiGH8+fPMTZeXWOdz2VJT02RzU4xMTZC
+      sbL8JtEJR3CsajG2bZNIJPBcF8uyUZ7CsS2UvnEs59Z0dnQQS9ROhAUErJQFLUA188biwMFD
+      WOEYtpBo41PxIB51iEYTxMPLbxK9Srm6Fl3abO7uwi0XscJhuru6STQlmUpP0tK4+Dr2m1HI
+      pOnLpNm3d2ECjDGKy5f72bFjbbpDARuHBQ4QTTTSnaidYZ25RTs31SZP3IxwLMGW2Pwn9cLk
+      hM7OlR1vBl/YWJURzl64zsFdc/mso4PXyJXKgTDWOthu+CD4bqa1NUnel7Q2L2w9wtEY1lQh
+      UIdeB9vbFQRfHc2gtWFLR9Oi13E9z9UYQ99wNZ2zu632wQ51OA8AcOWNs/RfG6e1bWFGWHNL
+      G4cO7Me6Sf5pwJ1jbKrAr/3xs/zaHz/L4MTtT8DqG57i1//4WX79T54lnSstuk/dtQBGa7bs
+      PUR4dOpOVyVghdiWJOLYKK0JvQnrVUKORcixiIacJXOZ6y4n2CvneeZr36B501Yee/TBBU1Y
+      Nj3G8HiOnTu3UymXgoywNdjeri5QJl9GG0g2RFZsu5pyJ3MlbClpjIcXtam7FsCJJGhpbiAW
+      rb2AsXgD0YIbCGOtg+3tCoLjkeott9T3632ujVHnpuXVnQMAJBvjXBga5b77Fm4fGR6k5Alm
+      hLEmcxUsq/bEV50Ur/WCplQIUasgIWDBYqTpz0orLLnKZO8ZW+2h0/3Ilu1ViZBp8iWXQtml
+      I1k7NzJj69gSA/QPT7Ep5hEyZWTzliXLnJ8UryevIKLNiGiyZr9SqcTIRIbe7o7qw0YrvJGz
+      2O17ENZc66u0pm9oit7O5qVVN3yfSwPD7OztpFSuMD6VZ+vm5alKwMzvCrmCSzpfZktHNfD1
+      fM3ASIZtm+b0ifTUAB6h+nSAfEURt0GzMIrv3rJw/P/Fk/0oA5iFT7GqgNLClsFg5r3IbG7r
+      /G3GmOqykFnltaqu0PSHGltzoy0G9CK61f6Nyk0Go+a2zZSrrr2GKecQDR1YqZ1gNL7ncm5g
+      HG2gp72RpngYamwFXqVMOl8iX3RxhE+blUHEWsCe15IaM207z4uVi6nkABDhxPR309unz98Y
+      gyUl0ixybtPX2VQVxHhRMC0udiMSpTW+kbwgLbQxaA0hx8aa7zCLdT/FwuMVSh7KQCzs4NiS
+      YtnDU5qQYxMNOxjtYcpZijpSfw5w/fJFDr3lUQYuXLzlcugf11/BXmRRhBamtm8rFvtRxIIL
+      brRBSFG7r5Bw4xpUY0BY8z4ahGUhpFNray2yTc4bztMaIS1UJI3qfwl73/ux2n0QEiNifLVS
+      YjxT5J880EFjIoKw5kbHtNbVyUgrxBsD4zzzygUOhgd4PPY64cd/AxFPLThfYVW1f7SptgAm
+      O0jle/8e2dhN+Ml/NVuvmf3+7GuvcOZajo89uZcDe3finfkq3rE/x973AUL3f2x6f8GzP7zE
+      P7x8nnc9sJ2fePxA7aW2HP7+uWM889oA73twC+cGxrk4WuF/+eD9HNzdO1fDG68VzJahlAIh
+      +K0/fY6BsQK/9VOPc2BbO5/+6mt858gVfuaJw/zkjx1ATVyi+KWP8qdT762/IHhq9Conzw1g
+      h2M88pb7lnSCUulHLwg2ysPkhhBNmxHznLBQdilVfFqbagWj5perjWF0skBLxMc2LjLRvmSZ
+      84NgnRtGhBLTLcBCKpUK6WyRjtbmqsNojZ/ux072IOY5sdaG4ck8HS3xJUdklFIMjkzQ1ZHC
+      9Tyy+RIdrbXdrltdp2LFo1ByaZueJ/KVZmyqQEcyMdcFKoyhsANhrJUQCGPd3jLvhG0gjLUC
+      7nQL8GbabpTl0HU5E3z2+Kscf+NykBIZsGbq0gGEkOSz2eA9wQFrpu4c4PqlswyMThKL1ybF
+      p8eHA2GsgBVRd8OgnuuD8iFc2/svFoqBMNY62QbLoe9Stu47RKyxCdeK1jRfTihEKOQHwljr
+      YBsEwXcxrx99le997wc1wljtmzazb+/uQBgrYNnUXQuQHh2kYsVoSzUEo0ABa6bunpXJ9i62
+      dLVjL/KYz0+NB8JYASui7loAgPbOTdiJWmGs4ZFRfBHCD4Sx1mwbBMHrhOu6WFLgKUM4ZOP7
+      GsdZW7FnTp1AxtvZsXPrgu1tba0MjWVmg7cgCA6C4FtRI4x1bXSqKowViRGORCmWSpQ9TXdH
+      68or5JZ49cgpulobyJQN3a0xxnOS/buXXoe+HIS0CIVDNS1AU0s7TS3VBV6LLMwNCKhhobsY
+      g23bnDt3llRzAzLSSMmEkEatygHGhofwPJeKp9HKZ3RsgpK3eGraSmhtSeGGokFfP2DNLHAA
+      YdnEohHuve8BZChCuZAnGovh+qu71TZt2U5qUw9GuZRcQ3NjvDqRtUbKxRz9QzkOHdi1YLvR
+      iouX+9i1c8cSlgFrYTxT5A//5gds39TM//Dee2/69vd6YYEDRGIJIvOErOLRqmbn4q8lXh4h
+      xwHHITydeOSEFkloWCGuBoqjnD5/jXt2b57dPnStn2yhiAqEsdZsu1gQfOLiECcvjXBuYJyf
+      emIf0fDi/e16Ote6HAVqa2sh6wk6UguXcDc0JcmWfXgThbG0Npy6PEJXa8NsAsZivJnBnfFd
+      1LUfItv3QqjplrZT+TJXBtMc3N6OY1eXmMw8PIQAdf0oMt7GWw/00DecpSfhEh47xht6GyHH
+      oVj2OLi9fTbX98b6qrE3KLuKs/kk+3vbiEWWfgiu9FyV0py6PDqdDhpaWxBcL/SdO8f1nMOT
+      71gotdjQlGRv01wG0X/+r9/G04CQWNZ0foBtIaSF4zhIWRXttR0bx5I4toVtScKOjW1JQk51
+      W2h6uyUhEnIIORa2ZSElvPL6Nf7ky6/RkYzz//7LH0dKgZRiyaynNwP36OdxX/xDrO4HCX34
+      /7vl/v/3F1/kTN8YP/fUPfzkE/sXfKf6vk/py59ExFPE//nX+fjT91H44k/z0ssuf5D9CBgB
+      Av7HD9zP04/srjm2zg5R/NJ/z+fST/Lt8oM8cW8vv/aRR9btXL915DKf+vJr9HY08R8++e4V
+      29edA2it6Nq5n/Bk7pb7/rPeS9i6jJnuDvnKR/k+nudhXIPn+9Xtno+vDa6v8HyDp6rf5bTE
+      Mxaelrha4GvwsPGUQCHxsfE1vD1s4RctPv0fzyAsByUdtAyD5SCsMMJ2MDKMtJ3ZRB1r5n9r
+      /t/WrPOFHQvbrjqgFHOO59hy1iHDjl11OCFmHU8KgQo1o0QIK962rGva0hDBtiRN8VqpGRFu
+      BCeKiLXO5kLLeBsJ5yphW1bf96A0jYvYAmCHEeEmmsIayxUkG1YohX8LGmNhbEuuXGJ/mrrL
+      CfYqBb7xta+TaN/CE29/S40w1tBYlp27duCugzCW0QqMAq1A+yivUh0X1351m6luN1qB8kBV
+      MMqrKj9ohfEr1b+Vh/aqekVK+Shl8JVCKYXyq86nfA9fV+vm+hpPUXVEpal4qvq3Fni+xlMa
+      d9pRtTaoSh4tHEy4EW1FMEKiShlMpKr6oKWDlDbGDiOsOSe0bQfLtjFIciWP1solHMvCcqeI
+      7HyCUDRRdbpKGjuaIBxtwLElNj5O4RqTL3+e+Ka92Pd+lLbmOJYUmMEjeK98isj9/5TQ7ndV
+      ndLNobVmohIi1RS9aeu44u6eMUxkSzTGwkhhsCyJ+8IfoEZOE3nq3yEbu25qX3ctgBOO09zU
+      QCxeG5pHYwliMQ/WdTm0nFVu0CIMK+jazC9ZTGsKreaCV5Udlii3PEXps0+BXyH0rn+L3P7k
+      rGOifbTvI4WZdlIXo2ccz8P3FWr6OnmDp6gc/0uUkfhY+NFR9Oa34RWq0ieVrCCvzLQDGtyp
+      QcqjHt74RZj6NgoLbcCfuIzKtmOGjyBenR6QQICwqooO0gbLQQpZ7VZaFpYlsS2BEBJLCmzH
+      QVoW4emWrtrlnOmOzuuWTreGjjToaWkZGx/32N8h/RLe+RcI7f8AQoAlmFb0sBaoetSdAwCk
+      kg1cHpvgBl0sxkaHKbnABloObeIpJg7+MhNXz3Hf7vcgb1Bu8CtFGDzCkL2NvGpib28r4UXq
+      b3behxuuVKVWKnnsB/4ZsrFrUcebzJa40n+VPT1ZnEQSq70bq+fhavdv/ALusb8gdPBprE2H
+      546vqy2pGjlV1R5q24/WVFs/bTh/dYKSq0hni+zf1opjCXyl8XxDRYvpllFRcRW5YhlPC3xf
+      4fka11e4vkZ5LgZQW/4vlFdB90Wg/zi5YpmrI1Ns6WjElgIx84DA1KcD5Es+YWFqhLG6erbd
+      qSrdMUquz//xUjPZ4r38dn+O+3YvdAD3tc+RfeUz/KvJf0GBGL/z8Sc5tL1WbU2E4oQf+7XZ
+      z0ot/eae3/3C81y6nuYTT3+Id5z/17gv/kfCT/4moXs/itW6C+fJf411g8MKaaHzw5T+9hfA
+      KGIf+3tCLdsJAcOTeX7vr47i+9Uh13c96PIrP/nwiq/FUg+K//PPX2Bg0uW+/Sl+/n1zj01j
+      TP2tBr168TwHHnqUzZvag+XQgCWrgWUkZJOIhWq+F/EUlm3RHIFoyCEeqd1npaQaYziWpDkR
+      QTR0gBWqqszdCjuKiDQhwo0IZ27IOOLYJKIhImEbyxKrDmiXoqUxVg2UbwjAhRD1FwRnx69z
+      /GwfoWiChx88vKGEsZaiVPGoeIrmRO1IjO97yNIEZasRV8tF91mMmy2G83xFtlCp3qjKxZSn
+      EPH22ety0y5bOQtGI6IL3+2QK1alFovlCu3JhlXNMi9VrlKayVyJVFOsRhIzEMZaAYEw1u0t
+      807YBsJYK+BubQFuh+1GWQ5ddzEAwOtHXubomVuL4wYE3Iq6dAAnFKZcKATCWAFrpu4c4NqF
+      17kyNEY4Fq9pASbHhjh34XIgjBWwbOpuHkApgzAauUiwUyqWKJcCYaz1sA1ygu9SevceJBRL
+      4Nm1wlihcJhwWAXCWOtgGwTBdzEXTh3j+y8eqRHGauvsZu+eXYEwVsCyqbtbJT06SJ4QqWSt
+      OG5AwEqpOwdItnexvaezmmp5A7n0GJcCYayAFVB3MQBAMtWKCfs1LcDI2Di+sQNhrHWwDYLg
+      dcAYTS6XJx6PUiy5hCwBdgivXCQSSyz5vthbcf7sWeyGjponfXtbK4OBMNa62G6UILhGGOvq
+      SJqmqIUVimHbAmSYSiFNuCFFc2Jlq/TGrg8wXjSEKOHEk3iFHAZDLpcl1dlLb/fSbym8GXL6
+      xr7xNmxMttGYrKYBBsJYActhgQNo7SOE5I2zZ9jUu518roQBGsMGWzkrdgADlPPjlGUUlR8h
+      2RDD6Oo7epW/9HrzW9Hc2IgbCgV9/YA1s8ABnFCUVNKmq/0RLCeKmF5soLwKVmjl6kDt3VuI
+      NLSQiEcolj0cC4QdplLME403rrrSvlvm6ugQhw/tWbDdaJ/zF/vYs3vnqo8dsLGou3wAgOOv
+      /ZByOU8kuZV7D8xlgV0+d5orI1M8/ugjuJXykjHATXNsb8Jq7erRdua2WE28U0/nWpejQImI
+      5Oo4vOstmxds377nIO3deRzbwveCIHgtthsyCK4XJscnKOQ9QovILCYSiUUsAgIWp+4mwrxK
+      kcmCT2dr84YPgo0x6MJ4VYto6b3QhbFb7HNnKJRdClUZjztG3bUAlh0iEbXRoXCN92bTY/Rd
+      G2X/wQMA9I9kkLJ21ehaUiItS8IqFmHcjlQ/dfVVKi/+Ida2xwk//IuL2rpXvo//g09h73gH
+      oYc+vuwyb3dKZNn1+f0vvYTSht/42UeJhZ1l266l3BupOweQVlVCMBqrHZK1LJuOTZuQ08uh
+      zw2Mo80iM8HG1CRHL4fV2t0uWzWUwSt1YI34OFdGF7X1rmVRpQ6sEW/JfRbDGANCrGq91XLO
+      tez6ZAoVtDG8fmWM2LTS9Jt9jevOAQCSySSjuULN9nK5TDZfprWlBSkl73lox490TrDxt6L6
+      25Ed+5CJWq0fAL+8Ga53ITsOIhPL0wqFNycIPryzE20Me3pSy1KUWK9y51N3DqB8H2VAqdo1
+      H6n2TaRWN7lclwg7jL3jx26+kx3G3vHkm1KflbK7J3Wnq1B/QfCVs6fo2nWIxrAd5AQHrJm6
+      c4DeXbu5ePoojR1d9dd8Bdx1BMJYKyAQxrq9Zd4J20AYawXcbUHw7bTdKDPBddcFAnjh61/h
+      m8//cMNPhAWsnbrrRmvl0da7A38kfaerEvAjQN21ABdOHGNw6Dol49RU/nr/ZU6cep1VvtY4
+      YANSdy1Aa1cXGd+QDNfmExhjMEqhg/cEr9k2yAm+S0l1bmbo6lUqiJoYINnSgi8jOFKigpzg
+      NdkGQfBdSvWVpx6DwyM161TijUm2bulmlUtJAjYgdecAmYkRLgyMINxyjTJcQMBKqbsuUHPb
+      Jh59+H4Gpyo1lR8dHCDnSbb3bl7UNiDgRurOAQCm0ml8r7oWaP5EWC6fJ1fyqHR3BUHwGm2D
+      IHgdqBRzXB2eoCHqkC64tDdF8a0oUeFDOEFDLLyq42ayWRKpzTUxQE/PFobGM4QtSTkIgtdk
+      u1GC4BphrAv9Q4hKlkgiSSQWRosIbm6URGMLdsgh1tBCPLy89RbZqTT5TJqunsO4/iAD/QO0
+      b97KcHqMhrbuVTtAQyJBxatN8QtFE/T2BDnBActngXuXi3mQNq7nEW1oIJspkM9MYEtBwTVc
+      u3qd2DJvfgCEwLIEhcwkDS2tNDc3MZWeoOK65AulVVc6PTLM+EQmWA4dsGYWtADJ9m6S7QBV
+      YanNmzpnv9NemXRz44pS5No29dC2qWf2c/POPTfZe/k0p5q5OjCB5/rYoblT8CtFjr1+nofu
+      v3ddygn40WfZHSbpREg1L+8ly7ebXNEjIUucOtPHW+6dU4Hrv3KZQrGA56sgCF6jbRAE38W0
+      tzYz5TkcPrB1wfYdew/SWSgEwljrYLshg+B6YSo9RT5bwXZqqx+Px+9AjQLqlbqbCfYqBYYn
+      C7QmG4J8gLsA41fQuaFVdw2XPK5XQueG13wcXZzElLNLfl93DmA7EVJNccKx+KLCWCdOnA6W
+      Q7+JlP7hVyl85n3457+xbsc0xlD621+g8Nn34fd9f9XH0VMDFD73fgp//pOYcmbRfequCySk
+      hbQkoUjtHIKUFps2d88KYwVB8O0Pgk1hDLSHLk7OlrPW+gLowjgoF1VMwzKPdWO5ppwDt4DR
+      PsotgV3bPa47BwBoaGxgLFubxO+6LplciVQyWQ1Wx88i5CIBq1KI1SReawVSsmK9NCEAC7HK
+      V0KhdI3t2b5xRtJ5HrunF8u6SX2mbdXVH6ILYzi7nwJpUSh5vHCyn8M7O9nU2oRC8t2jfbTZ
+      OfabU1j7PogINyCMwjvzFWRzD9bmtwCgx86hrr2Gc+BDDO78OKcyL/NU+70cfeUlyq7P2w5u
+      RlgWpjCOf+5r2DvfDZaD/8YzEGlEOFHs3U8BgslsiRdO9pOIhsBostkcjzb2kTrwITw7wTcv
+      SfZ4x9jZk0KI6m9mvCLeqb/B6roXt3k333zlHPt7W9nR2zkrhamnBlAXv0X4sV8FrfF/8CkI
+      xUFYUMli7/8gMtZaf+8H8D2P82+cZjRd5vHHH1myD1cqlfjsZz6Dt8iMMYbVyHuu3m6dbY2B
+      8UwRY6ApHiYcuokzGwCNyY0ABhFLgR0mX3Ipln0cW5JsiFBxFZlCNcuixcoiQwlEpAG8EqaU
+      BiERiQ4QApMfBe0jwo1MVCyUMkTDNmXXxxhINkRwbIkpTYFXBDtSfQh4c5OfImH3NXUAABIi
+      SURBVN4GlkO2UKHsLlzXGxYujVaZcqiVXNFFSmhtioOY/rUrOUx5CqRFyU6RK3lYElqb4zD9
+      eNKFMfDL1Zteq+rf8wklkNFk/bUAfWdP0bHjIIWTx9DcPIj5+U98AtuuVYVQvo+1yqFBS0pW
+      k3Cw2jIXs9Xa8IVnTzIwkuGff/ghkg1Lv7pK+T6WFFRe+H105hqRd//viGiScwPj/Nk3T/LE
+      A9t4x/3bmMqX+aO/e5UuJ81H7K8SfuyfYrfvg9IE5W/9NrJ1N+G3/QoIiXv8i/gXv03kxz7O
+      M+cNPzhzjY+87z6eeeUCxYrHJ37iARKxCP7Ay7iv/CdC9/8cOFHcH3waEW4EJ0LkPZ9E2BGO
+      nh/ir//xTLUF0IpcPs97m47xwO7tTOz4aT715dc4tLOTDz+xb+78J/soP/c72NseY7TraT79
+      1de4d1c773/88Ox18s4/i3f8Lwg/8kl0cRLvxJcQoRhIC1POEX70l7E2P1iHLYBb4sSJUyQ7
+      eti+ZdOS+5VKpUAWZQ22G2UeIBDGWgGBMNbtLfNO2AbCWCsgaAFub5l3wrbu5gEAvve1v+OZ
+      774STIQFrJm6C4K179LWuxMztvjERkDASqi7FuDciWOMjg1T1E5N9+da3yWOBzPBASug7lqA
+      zp4eigMWyUjD4kPr07PAwUzw2myD5dB3Kcn2LpzLV6h4sZoYoCWVQtmxQBhrHWw3ShBcdw6g
+      tUZIw+j4RM3TP9bQTG9D8x2pV0B9UncxQHZihLNXBlGlfCCMFbBm6q4FaG7bxOOPPrioMNbI
+      9X7yvhUIYwUsm7pzAICJ8XFcP1QjjJUvFMgUXCpdgTDWWm03cBBsKBSKs6mFpUKBUDyOX6kQ
+      Dq9Mx6dcyHJ1aIKOtmam8hUi0kOEGnBLheq6/RUdbY5sLr+oMNaWLVurwli2pOwHQfBabDdk
+      EFzKZzjfN4ilyjS2pMhlcthSYjc2EbMF+ak04UQD+akMrV1baG+p1eifTy6ToZCb4lIhR2NT
+      M8KSGC9LSFq3XMl5MxobGygvsszZicTYsjm2yqMGbERqhLGkHaKjq4eIZfC1QUgblIcymuZU
+      B2GpcV2XUsm95cGFlNi2pKmpiWKhhFvK4RvB2NgwE5NL52neivFr1xkZSwfCWAFrZglhLIBW
+      2rtqDYxuoljy2dTRcsuDt3Z209rZXftFb0/tthWQbGtm4MoYbsXHDs+dglcucPT0eR5+8L41
+      HT9g47DizpaQNtt27LgddVk2hbImGVGcPnuFt9y7a3b71f4+SuVSIIy1DrYbOAi++2lLNZHx
+      Q9x3aPuC7dv3HKCzpxgIY62D7c2C4JdOX+W1c4P8zDsO0p6sTTSvp3OtSwfIZXLksiXkIskP
+      sVgQBN9uPvv144ymC7Q2xvjouw/d6eqsibqbCfbKefqGJkg2xIN8gBWQL7mMZ4rrcqwPvX0v
+      9+zo4G2Hlo7lMoUyE5ki18eyKLWwG6W14dpYFrXM7lWp4jEyubKMRaM8dLoPc5MyPF/VXwtg
+      h2N0daQwkaZFhbEu9w9z8HB9P5XWm1LF49f/+FnSuRK/9wvvZOfmWw9g3IynH9nF04/sWvL7
+      TKHCr/7RsxTKHlob3vvwTn7xgw/Mfv8X3zrJ3z3/Bk8/sotPvP/+m5ZljOG3/vQ5+oan+M2P
+      PcaDexYZmVmEynd/D+/03xJ6678g/Nb/adF9/uTLP6w/BxBCIqVALqILKoRF95aeWWGsQqmC
+      7dWuGJICfLX84E5KgRSiboNgz1OUKh6erylV3GUday1BsOf5VDyF71dtC6WFZRbKLtoYCuXa
+      utSIWxkolD2UNpQW2X8pW13JVZfGV/JL2hRKXv2pQgC8fuxVRnOKxx9/ZMFSiPT4COPZItu3
+      bsOtlPjL75zBv+H3Mxg8XyHE8nt/2hi0NhijpwPgWwfBQlR/vNlyjV5RmfMxWiOmg1FTnECP
+      X0TEklhtu9HacHkojedrejuaGBzP4fmKHnuUIZXCM1ZVKUdAW3OMloYoQgim8mUmskUSkRAd
+      LYmqFmf6CkI6yNTO2e5lNTEeTHYQ4xYRiXZEZG4C1GSuk3EFWR0nEQ3R0hjFGMN4poTnKYqu
+      h2NZhByLzpYEUgo8XzEwnKGnPUHIEmA0Jj+CsGyMHUP4RRAWyo5TrngUikVy+RLbO2K4OIAg
+      JDyktBdI1Bhj5gYovCJq5AzWpnvACs39LtJCGYFtSYoVr/5aAN9zkU4YIYo1t2GytYNk69zn
+      jx70sSUw83Oq6uTdjHqA0Qr0DU8H5YGZ7zUGo6qzzrM3Ys0+c8eetbphH2M0wqgbvELPHnsW
+      7YNZ2GoZPeewyj2FFqdBN+I0/zie0nz3ch9KaQ5ZbZwtj+MrzX7dzwVvM2q6o9gUD/NwT/fs
+      NTuXnaA/P0WSCA81daGzQ6jKyyBt7MRTIKfFBAQYbfCHn8NUcljxfcj4XPfHH3qOC8VmhlUL
+      LTrK4U0d1dYjXi2pWPF49ex1MPBgqpNEdPodEw1Uha6khSln8K89hwFkcy96qh9hOVxreZJz
+      Q+MIK8S7esv4gyd4rnw/FeOwz+nnvNeDQnLPzk1s627DaDOrBCikjd7k4535bRACe+tj+Fee
+      59nSQ4yrJrZ3J3n74a315wBXzp6ibftBstmjt1xOYQpjGDHvRrVDgACtMVqCsBDyBtWI0A3D
+      ekIgZPUJovX0MKgVqhXHsm5YJyUthJxrn5TSWKHIQjsh5260mU2Wc8OxRdV2esRLp69Q+f4f
+      YO98N87+DxIyUDSvc3Usx5PvvZ/cKxe4Pprmkeh/Y1K9g2uVRjxf8cS9W4ncu3X2qPHraY5+
+      6yRP3r+d8OFeTGmSynd+B5ncRuhtv4I2zMqiCCFxT/wV/sVvEX7if8Nq3T17HPf4X8LZ87yc
+      fztPP7Kb2MGeBcORYaW5rF/D9RTv+uBDhBfpuhrlUv7WvwEM9gMfx3vh32P3vJXW7R/hr7/y
+      Gvfu6iRxKEb5O7+Lr57iYiHFY4l/4Jx+hEulVt7z1EMkmmM1w6DGLVBWJUSkgfCj/zPl536X
+      ztIuTk/t4h3vPERia1v9dYGUV+bkiVO0bOqlt7t9yf0CYay12W6UxXCBMNYKCISxbm+Zd8I2
+      EMZaAUELcHvLvBO2dTcRBvDdr/41//Dtl4KJsIA1U3dBsPIrtG7djVjDcuqAgBnqrgU4d+wY
+      6clRCipU0/25euUix46fCoSxApZN3bUAXdu2Urk6REs4USOMJYRAEAhjrYdtsBz6LqW5tRPO
+      n6egnZoYINXWhnHigTDWOthulCC47hxAa40TshlOT9XMBEfjjfTEb56nHBAwn7pzgOzkKK9f
+      vEok0oCiDoOYgLuKunOA5tZOnnzs4UWFsYav9VNQgTBWwPKpOwcAGBkeoazDNcJYhWKBqXwl
+      EMZaB9sgCF4HKqU8k7kyiRB4IkIlN45x4pRzaVpa2xgZGWPLth1Eb/aaz0XIFwokUsmaGKC3
+      dxuhQBhrXWw3ZBBcymc4d+U63R2tlLMZlGNjrDjSzeAJG69QoGXTZjpSy1NgDoVjmKkc8USS
+      kYkCmUwWY1XQfoWRsQyoChXPX7EDNDc1UVxEGMsOR+npXvqVoQEBN1IjjGWFImQmR2ja1E25
+      rHALGYzWaK1mx9eXS7mQZXBoiNHRMYZHRpCWje2EiYVDxGIhtJFovXKN5+H+PgaHxwNhrIA1
+      UyuM1WaYTKdpjMdo3LNzTQePNjTz4P3VnM/OxVI5u5eX33kjLe1J+i6OUC57JCJzi928cp4j
+      p87z1odunmcaEDDDYom1tLSsLWn6dlNyBR2NNmfe6FsojDUwQKVSDoSx1sE2CILvYlLJRnIq
+      zP33LFSo2757P5t6SoEw1jrY3qkgeCyd58+ePcWh7e2856G533c8U+Tz3zjB4Z0dvOuB7Yva
+      bpjl0MVCkWwmO5soPp9oNAiC65kXT1/l+RP9fPaZ4wu2f+94H8+f6OdzXz++hOXqqLsWwC3n
+      OH9lkKZUR5APUOdMZksYY0g1zan5Pby/m9NXxrhnR8eCfd9+aAtn+8e5b1fn7DZTyWGKE8jk
+      1gX7mnIWrzDJkNdMd7SItEPIeCtjUwUcy6K5IcJoukDIseovJ9gYw5GXv4+JNPPA/YcWNGHZ
+      9BiX+oY4dO89eOUgJ3gttre7CzSRLfLJP3gGrQ1/9Kvvo705vqL6Gq0ofuHD6PQVoj/xR9jb
+      Hsf3fSxhKH7hw/yngUM8X76HD8Vf5J+kjjPx3i/wv37mh0TDNr/xs4/ybz/3PWKRUP21AEII
+      EGaJH0bSs7V3Vhjrjf6xRbtJWhukXN5N7Cs9q2SyljxZrfWqbqZb2Xq+4maPsNXqERljqMoJ
+      rfxcjdEgxKww1mJM5EqUKtWA9cWT/bQ1xTCqUpU2EVSlZ6AqHaPn/kZVbYxfRo1EQe9Cvvwa
+      4lKxqgvkl1GjMcraZq/TR0ZFeXWqg/R3/p69oojlaY5+6xp7RBbb1fXXAgCcOvIDxnKKJ37s
+      0QVLIaYmRhjLzAljPf/8C9VRDKNn9X+M9jEzo0PKZUYzyCh3+k8zp/FjqppAlhRYQmOUP23n
+      YWZmIebr/8zazdP7MWZ6f4MwqqpFBNX6LDYHYlWFn4Cq/Mp0DYU9Le4kJEh79m/HEghMddv0
+      jT5jhxAY6cyJec1un7fP/O2WPessRtqcvDzG9fE8D+7rmX0bUFUSBkBO17VaTvV4BoSNRmBJ
+      wZWrQ3z35CCP7u/i0N7ts/VbUFd7oZzMjLN/88VTvHE1zU83fZ/Uln04B/67mkv19R9c5OK1
+      CT721GFil/4ePfw6GIXV+zacfe/H9RSf/+YJfKUplj0+9PY99Hpn0W98BSsU5YS/p/5aAM+t
+      4ESiyGKtMFZzqoPm1Nznx1Ij2PgLbiosB22qcofCSsztPPNDCDGr1SOkDTPaPtJCm2qXYMF2
+      y2F2LMFyQEx3kWZvjqr2j1IK23bAmr7k0gYx333Fgv/mf6hRO1i0BVq4baaVWksX6Iv/4RlG
+      vAIHmvfxxHsOL9t2psyXLjzHhGpkIGvxifv2L9vWsiz+n7/4LmVtUSmVuGf0izT81C8v2M/z
+      Fb//pZeoeArlljk89ldgSgCI8Wsk9v0iJy+NMJouMJM5NZIu8EH1VTQnwIW/Se+tPwfoO3uK
+      1PaDTKVvLYzlHP6ZuyYG0L6PWGU/Hm0WiGy9WXzkyf28cuY6T963dVX2T791J8WyxwceXVpI
+      dyk++s79nO6b4JHmTYS3vavme9uS/Ow7D3Lu6gQPH9pGOPRL+IPHAY297QkAdvekeMf92/CV
+      plByee/DOwm5P4936q8RoRgf8lrqrwukfZdTJ0/S0rWVns7WJfcLhLHWZrtRFsPVrTDWrbiZ
+      MNZqA9K7MQi+XbYb5VzrrgVYLjdrAYKb4tbM3BY/6udadzHAerDaC7xau3q0Xc2Nv9Yy74Rt
+      XS6FWBXa5eTx4/RfH6FSynHkB6+Sqyxv4VRmfJjjR4+QqWjK+SlePXpi2cVOjg5y4ugR8p7h
+      yoU36L82tGzbvkvnOXXmHBjFmdMnmcwss5tqfF4/eYIrA4O4xRxHX32F0UxpWabF7ATHjxxh
+      Il9m4PIFjh47uWydpesDlzl+6nWUMZw+cZQLl/uXZwjkpibpG7gGxnD29AkuXhlYpqVh6NIp
+      xoqgtcfp188uu0ytvA3kAMansaUD47tYlk0iHkGp5f2yrufT3ZGi7GkGrl6jXC4te1Wo6/p0
+      daQo+4ZINMr4+PiyqyzsMIlYCLSmUCozMjq6PEOjiTelEMYnFEvQtqmbtsblrZHyPI/OjnYq
+      ro+QEinMTSfa5qOwSDbG0Aba21rJZnPLMwQamlsIhywMEG1owhbLXYUqaGtrBQNSOqRalpes
+      BSAtZyPFAIbR4SHC4TCekWQzObZu7UEuo6k3RnF9cATHtmhvb6dSKROJLO+GMtrn+tAYti1I
+      hB0KvqSjNbks23IhQ65iUJ5L2DJY0SYa45HllMrE6Ah2OIyPTSwcJhoJ3dqM6izu4OAQIccm
+      Go0ylS/R3dmx+NTDDXiVIhPZEmgPqX3iyQ7ikdoYbDGmJkYZSRdpSkQI2wInniQRXU6dDdf7
+      +1CWTdgJk5lK097VQ3PDrd8WqvzKRnKAgIBaNk4XKCBgEQIHCNjQbMhh0ICNSSU/wle/9j26
+      d+4jGbXw8mNBCxCwschMjCKNx8mjr9E/lg+C4ICNg1YuhaJLuVQgPZmmY1Nn4AABG5v/H1vE
+      S9Je0KODAAAAAElFTkSuQmCC
     </thumbnail>
   </thumbnails>
 </workbook>
